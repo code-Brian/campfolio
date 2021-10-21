@@ -1,6 +1,22 @@
-body {
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: white;
+}
+
+img {
+    display: block;
 }
 
 .welcome-section {
@@ -11,10 +27,13 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #000;
-    background-image: linear-gradient(62deg, #3A3D40 0%, #181719 100%);
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+    background-image: linear-gradient(180deg, whitesmoke 0%, #181719 100%);
+    color: darkslateblue;
+}
+
+.welcome-section a {
+    text-decoration: none;
+    color: white;
 }
 
 .nav {
@@ -26,30 +45,91 @@ body {
     width: 100%;
     box-shadow: 0 2px 0 rgba(0,0,0,0.4);
     z-index: 10;
-    margin: 0;
-    padding: 0;
-    background-color: deepskyblue;
-    box-sizing: inherit;
+    background-color:darkslateblue;
 }
 
 .nav-list {
     display: flex;
     list-style: none;
-    margin: 0;
     margin-right: 2rem;
-    padding: 0;
-    box-sizing: inherit;
 }
 
 .nav-list a {
     display: block;
     font-size: 2.2rem;
     padding: 2rem;
-}
-
-a {
     text-decoration: none;
     color: white;
+}
+
+.projects-section {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: whitesmoke;
+}
+
+.projects-section a {
+    text-decoration: none;
+    color: rgb(15,15,15);
+}
+
+
+.projects-section-header {
+    color: rgb(15,15,15);
+    padding-bottom: 6rem;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 6rem;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project-tile {
+
+}
+
+.project-image {
+    height: 12em;
+    width: 12em;
+    object-fit: cover;
+    border: 0.1875em solid #000;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px 5px rgba(15, 28, 63, 0.125);
+}
+
+.project-title {
+    font-weight: 700;
+    font-size: 32px;
+    padding-bottom: 1rem;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background-color: #181719;
+}
+
+.section-footer {
+    font-weight: 400;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: #181719;
+    border-top: 4px solid darkslateblue;
 }
 
 @media (max-width: 375px) {
